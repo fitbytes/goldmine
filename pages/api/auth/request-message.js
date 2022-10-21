@@ -21,8 +21,9 @@ export default async function handler(req, res) {
             network,
             ...config,
         });
-
-        res.status(200).json(message);
+        console.log(message)
+        //res.status(200).json(message);
+        res.status(200).send(message)
     } catch (error) {
         res.status(400).json({ error });
         console.error(error);

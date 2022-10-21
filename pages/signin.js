@@ -22,7 +22,7 @@ function SignIn() {
 
         const { data } = await Axios.post('/api/auth/request-message', userData, {
             headers: {
-                'content-type': 'application/json',
+                'Content-Type': 'application/json',
             },
         });
 

@@ -3,6 +3,7 @@ import { signIn } from 'next-auth/react';
 import { useAccount, useConnect, useSignMessage, useDisconnect } from 'wagmi';
 import { useRouter } from 'next/router';
 import Axios from 'axios';
+import Image from 'next/image';
 
 function SignIn() {
     const { connectAsync } = useConnect();
@@ -41,8 +42,19 @@ function SignIn() {
 
     return (
         <div>
-            <h3>Web3 Authentication</h3>
-            <button onClick={() => handleAuth()}>Authenticate via Metamask</button>
+            <center>
+            <div className='card' style={{width:500,height:500,backgroundColor:"darkolivegreen"}}>
+                <div className='card-body'>
+                <center>
+                <Image src="/universe.png" width={300} height={300}></Image>
+                <h3 style={{color:"white"}}>Web3 Authentication</h3>
+            <button onClick={() => handleAuth()} className="btn btn-warning">Authenticate via Metamask</button>
+            </center>
+                </div>
+            </div>
+           </center>
+
+            
         </div>
     );
 }

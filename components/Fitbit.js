@@ -1,5 +1,5 @@
 import DynamicPlot from "../components/Plot"
-
+import Link from "next/link"
 export default function Fitbit(){
 
 
@@ -15,7 +15,7 @@ return (
    <tbody>
     <tr>
      <td>
-<button className="btn btn-dark"><a href="/api/getcodefitbit" style={{color:"white",textDecoration:"none"}}>Fitbit Connect</a></button>
+<button className="btn btn-dark"><Link href="/api/getcodefitbit" style={{color:"white",textDecoration:"none"}}>Fitbit Connect</Link></button>
      </td>
      <td>
       <button className="btn btn-danger">get Steps</button>

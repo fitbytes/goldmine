@@ -1,6 +1,6 @@
 import DynamicPlot from "../components/Plot"
 import Link from "next/link"
-import { getCookies} from 'cookies-next';
+import { getCookie} from 'cookies-next';
 import { useState } from "react";
 
 export default function Fitbit(){
@@ -13,13 +13,14 @@ let request=await fetch("https://api.fitbit.com/1/user/-/activities/goals/daily.
      method:"get",
      headers:{
 "Accept": "application/json",
-"Authorization": `Bearer ${getCookies("fittoken")}`
+"Authorization": `Bearer ${getCookie("fittoken")}`
      }
 })
  let response=await request.json()
  console.log(response)
  setRes(response)
  console.log(res)
+ console.log(getCookies("fittoken"))
  }    
 
 return (
